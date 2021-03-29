@@ -1,8 +1,23 @@
 3/6 Notre Premier Serveur :
+à partir de 00 Minute 00 Seconde
 - Créer un fichier server de type js
 - Faire un console log pour vérifie si tout fonctionne.
 - l'execute dans le terminal
 - mettre un require http
 - ensuite appeler le create server
-- stocker la ligne de création de httpserver dans une variable nommé server
-- 
+- stocker la ligne de création de httpserver dans une variable nommé server (instaciation)
+- demarer le serveur avec on il prendra en paramétre une resquest et une function
+- mettre deux paramétre dans la fonction un nomm" request et une autre nommé reponse
+- cette fonction fait une log qui affiche une phrase qu'il y a eu une requête
+- et le faire ecouter sur le port 80 pour voir si sa marche
+- Ensuite le faire ecouter sur le port 8080
+- remplacer le console par reponse write head et on lui met 200 en paramétre
+- ajouter reponse end on affichera 'Salut comment ça va ?'
+- apres l'entete de type 200 on lui dis le type de contenu que l'on souhaite afficher
+- le content type est de type text/html et mettre le charset à utf8
+- Appeler la fonction anonymes à la création du serveur
+- et lui faire directement ecouter sur le port 8080
+
+a partir 10 Minutes 20 Secondes
+
+Créer un fichier index.html
