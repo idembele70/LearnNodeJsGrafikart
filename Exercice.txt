@@ -1,0 +1,8 @@
+3/6 Notre Premier Serveur :
+- Créer un fichier server de type js
+- Faire un console log pour vérifie si tout fonctionne.
+- l'execute dans le terminal
+- mettre un require http
+- ensuite appeler le create server
+- stocker la ligne de création de httpserver dans une variable nommé server
+- 
