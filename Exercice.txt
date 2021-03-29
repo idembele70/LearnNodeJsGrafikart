@@ -1,5 +1,5 @@
 3/6 Notre Premier Serveur :
-à partir de 00 Minute 00 Seconde
+À partir de 00 Minute 00 Seconde
 - Créer un fichier server de type js
 - Faire un console log pour vérifie si tout fonctionne.
 - l'execute dans le terminal
@@ -18,6 +18,32 @@
 - Appeler la fonction anonymes à la création du serveur
 - et lui faire directement ecouter sur le port 8080
 
-a partir 10 Minutes 20 Secondes
+À partir 10 Minutes 20 Secondes
 
-Créer un fichier index.html
+- Créer un fichier index.html
+- remettre les declarations au propre
+- inclure le module fs;
+- dans la fonction anonyme utiliser un fs read file
+- suivi par une callback qui prends en paramétre err et data
+- faire une condition qui veirfie si err est true envoie une exception avec throw
+- copier coller writeHead et reponse end dans le callback
+- reponse end prend en paramétre data
+- faire une erreur dans l'écriture de index.html pour voir ce que le throw fait
+- remplacer le throw error du if par un response writeHead qui prend en paramétre 404
+et faire un response end 'ce fichier n'existe pas'
+- faire un else et mettre dedans les ligne de quand tout marche
+- regarder sur le navigateur le type de l'erreur en allant dans network et activer all
+- supprimer les ligne du callback de server on
+- ajouter une ligne reponse writeHead qui prend 200
+- une ligne response end qui affiche bonjour
+- ajouter aprés l'url '?name=john'
+- faire un console log de l'url du resquest
+- faire un require de url nommé url
+- parse url avec url parse qui prend en paramétre url request
+- ajouter une deuxième paramètre de type bool et le mettre a true
+- stocker les information du console log dans une variable nommé query
+- et biensure on recupérer la propiété query et url parse
+- ensuite faire un bonjour avec le nom de parse
+- essayer de remplacer john var doe et marc et voir si sa marche toujours
+- si on met rien sa met undefined donc on met une condition qui fait un response write bonjour
+ou bonjour avec nom si le nom est egal ou pas a undefined.
