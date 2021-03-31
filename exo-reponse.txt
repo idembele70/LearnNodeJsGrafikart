@@ -1,0 +1,19 @@
+   videos : Notre premier serveur vers 21min40
+   refaire les etapes de l'ecriture de fichier
+   -------------------------------------------------
+   const query = url.parse(request.url, true).query;
+
+    fs.readFile('index.html', function (err, data) {
+        if (err) {
+            response
+                .writeHead(404)
+                .write('Ce fichier n\'existe pas');
+        } else {
+            response
+                .writeHead(200, {
+                    'Content-Type': 'text/html ;charset=utf-8'
+                });
+        response.end(data);
+        }
+    });
+    -------------------------------------------------

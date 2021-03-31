@@ -1,3 +1,6 @@
+Status :  Fini 31 Mars 2021
+
+
 3/6 Notre Premier Serveur :
 À partir de 00 Minute 00 Seconde
 - Créer un fichier server de type js
@@ -6,12 +9,12 @@
 - mettre un require http
 - ensuite appeler le create server
 - stocker la ligne de création de httpserver dans une variable nommé server (instaciation)
-- demarer le serveur avec on il prendra en paramétre une resquest et une function
-- mettre deux paramétre dans la fonction un nomm" request et une autre nommé reponse
+- demarer le serveur avec on il prendra en paramètre une resquest et une function
+- mettre deux paramètre dans la fonction un nommé request et une autre nommé reponse
 - cette fonction fait une log qui affiche une phrase qu'il y a eu une requête
 - et le faire ecouter sur le port 80 pour voir si sa marche
 - Ensuite le faire ecouter sur le port 8080
-- remplacer le console par reponse write head et on lui met 200 en paramétre
+- remplacer le console par reponse write head et on lui met 200 en paramètre
 - ajouter reponse end on affichera 'Salut comment ça va ?'
 - apres l'entete de type 200 on lui dis le type de contenu que l'on souhaite afficher
 - le content type est de type text/html et mettre le charset à utf8
@@ -24,12 +27,13 @@
 - remettre les declarations au propre
 - inclure le module fs;
 - dans la fonction anonyme utiliser un fs read file
-- suivi par une callback qui prends en paramétre err et data
-- faire une condition qui veirfie si err est true envoie une exception avec throw
+- qui prend en paramètre le chemin vers le index html en str
+- suivi par une callback qui prends en paramètre err et data
+- faire une condition qui verifie si err est true envoie une exception avec throw
 - copier coller writeHead et reponse end dans le callback
-- reponse end prend en paramétre data
+- reponse end prend en paramètre data
 - faire une erreur dans l'écriture de index.html pour voir ce que le throw fait
-- remplacer le throw error du if par un response writeHead qui prend en paramétre 404
+- remplacer le throw error du if par un response writeHead qui prend en paramètre 404
 et faire un response end 'ce fichier n'existe pas'
 - faire un else et mettre dedans les ligne de quand tout marche
 - regarder sur le navigateur le type de l'erreur en allant dans network et activer all
@@ -37,9 +41,9 @@ et faire un response end 'ce fichier n'existe pas'
 - ajouter une ligne reponse writeHead qui prend 200
 - une ligne response end qui affiche bonjour
 - ajouter aprés l'url '?name=john'
-- faire un console log de l'url du resquest
+- faire un console log de l'url du request
 - faire un require de url nommé url
-- parse url avec url parse qui prend en paramétre url request
+- parse url avec url parse qui prend en paramètre url request
 - ajouter une deuxième paramètre de type bool et le mettre a true
 - stocker les information du console log dans une variable nommé query
 - et biensure on recupérer la propiété query et url parse
@@ -47,3 +51,14 @@ et faire un response end 'ce fichier n'existe pas'
 - essayer de remplacer john var doe et marc et voir si sa marche toujours
 - si on met rien sa met undefined donc on met une condition qui fait un response write bonjour
 ou bonjour avec nom si le nom est egal ou pas a undefined.
+- faire cette condition avec response end uniquement !
+- dans index html remplace le text du h1 par bienvenue suivie d'une interploration qui prend name
+en paramètre
+-  refaire les etapes de l'ecriture de fichier (Voir reponse si besoin)
+- creer une variable name qui verifie si le name de query est égal a undefined name sera égak anonyme
+sinon name est egal au nom du query
+- remplacer le name de h1 par le name du fichier js avec un data replace
+- dans les paramètre de readFile ajouter un paramètre avec le callback nommé 'utf-8'
+- tester si tout marche avec anonyme
+- supprimer toutes lignes ! 
+- instaciation avec require de events nommé  EvenEmitter
