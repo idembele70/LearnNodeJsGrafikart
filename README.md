@@ -1,5 +1,5 @@
 # LearnNodeJsGrafikart
 
-Notre premier serveur : Mercredi 31 mars 2021 à 16H40
+Notre premier serveur : Jeudi 1 avril 2021 à 14H46
 
-Stop 26.20min
+Stop 30.00min

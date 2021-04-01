@@ -62,3 +62,19 @@ sinon name est egal au nom du query
 - tester si tout marche avec anonyme
 - supprimer toutes lignes ! 
 - instaciation avec require de events nommé  EvenEmitter
+- instaciation ne nouvelle EvenEmitter elle sera nommé monEcouteur
+- creer un évenement avec monEcouteur nommé saute qui prends en paramètre
+une fonction qui fait un console log de 'j'ai sauté'
+- ensuite faire emettre l'evenement saute a monEcouteur
+- ajouter deux paramètre à la fonction de saute a et b
+- ensuite mettre 10 pour a et 20 pour b lorsque l'on emettes l'ecouteur saute
+- faire en sorte qu'il soit emit qu'une seule fois
+- creer une variable nommé app qui fait un start App
+- lui creer un évenement avec app ce evenement prend en paramètre une string root
+une fonction qui elle même prend en paramètre response et cette fonction
+écris une response pour dire je suis à la racine
+- créer un objet nommé App 
+- mettre une fonction dans la méthode start de App
+- dans la fonction de start instacier une méthode listener qui 
+est de type EvenEmitter
+-
