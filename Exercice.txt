@@ -10,7 +10,7 @@ Status :  Fini 31 Mars 2021
 - ensuite appeler le create server
 - stocker la ligne de création de httpserver dans une variable nommé server (instaciation)
 - demarer le serveur avec on il prendra en paramètre une resquest et une function
-- mettre deux paramètre dans la fonction un nommé request et une autre nommé reponse
+- mettre deux paramètres dans la fonction un nommé request et une autre nommé reponse
 - cette fonction fait une log qui affiche une phrase qu'il y a eu une requête
 - et le faire ecouter sur le port 80 pour voir si sa marche
 - Ensuite le faire ecouter sur le port 8080
@@ -55,26 +55,39 @@ ou bonjour avec nom si le nom est egal ou pas a undefined.
 - dans index html remplace le text du h1 par bienvenue suivie d'une interploration qui prend name
 en paramètre
 -  refaire les etapes de l'ecriture de fichier (Voir reponse si besoin)
-- creer une variable name qui verifie si le name de query est égal a undefined name sera égak anonyme
+- creer une variable name qui verifie si le name de query est égal a undefined name sera égal anonyme
 sinon name est egal au nom du query
 - remplacer le name de h1 par le name du fichier js avec un data replace
 - dans les paramètre de readFile ajouter un paramètre avec le callback nommé 'utf-8'
 - tester si tout marche avec anonyme
 - supprimer toutes lignes ! 
 - instaciation avec require de events nommé  EvenEmitter
-- instaciation ne nouvelle EvenEmitter elle sera nommé monEcouteur
+- instaciation une nouvelle EvenEmitter elle sera nommé monEcouteur
 - creer un évenement avec monEcouteur nommé saute qui prends en paramètre
 une fonction qui fait un console log de 'j'ai sauté'
 - ensuite faire emettre l'evenement saute a monEcouteur
 - ajouter deux paramètre à la fonction de saute a et b
 - ensuite mettre 10 pour a et 20 pour b lorsque l'on emettes l'ecouteur saute
 - faire en sorte qu'il soit emit qu'une seule fois
-- creer une variable nommé app qui fait un start App
-- lui creer un évenement avec app ce evenement prend en paramètre une string root
+- creer une variable nommé app qui fait appel la methode static/constructeur
+ start App
+- le demarer app il prend en paramètre une string root
 une fonction qui elle même prend en paramètre response et cette fonction
-écris une response pour dire je suis à la racine
+écris une response qui fait un write 'je suis à la racine'
 - créer un objet nommé App 
 - mettre une fonction dans la méthode start de App
 - dans la fonction de start instacier une méthode listener qui 
 est de type EvenEmitter
--
+- ensuite retourné listener
+- avant le return creer une variable server qui est une instaciation
+de create server 
+- qui prends directement dans une fonction request et response
+- et il ecoutera sur le port la variable port qui sera dans le paramètre
+de la fonction start
+- dans la fonction de server faire une condition qui verifie si l'url
+est à la racine '/' alors on emet l'evenement
+- on remplace le mot listener par emitter 
+- dans la condition emttre l'evenement root et on lui passe en paramètre 
+la reponse
+puis on fait un end la reponse hors de la condition et toujours envoyer
+une entete de type 200

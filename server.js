@@ -1,25 +1,25 @@
-// requires
-const EvenEmitter = require('events');
+//require
+const http = require('http');
+const EvenEmiter = require('events');
 
-// listenner
+// listener
+
 const App = {
-    start : function(){
-    const listener = new EvenEmitter()    
+    start: function (port) {
+        const emitter = new EvenEmiter();
+        http.createServer((requete, reponse) => {
+            reponse.writeHead(200, {
+                'content-type': 'text/html; charset=utf-8'
+            });
+            if (requete.url === '/') {
+                emitter.emit('root', reponse);
+            }
+            reponse.end();
+        }).listen(port);
+        return emitter;
     }
 }
-
-const app = App.start();
-
-app.on('root', function (response){
-    response.write('Je suis à la racine')
+const app = App.start(8080);
+app.on('root', (response) => {
+    response.write('Vous étes à la racine');
 })
-
-const monEcouteur = new EvenEmitter();
-
-monEcouteur.once('saute', function(a, b){
-    console.log("j'ai sauté " , a, b);
-});
-
-monEcouteur.emit('saute',10,20);
-monEcouteur.emit('saute',20,30);
-monEcouteur.emit('saute',40,50);
