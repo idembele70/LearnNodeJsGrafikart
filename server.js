@@ -1,25 +1,27 @@
-//require
+// Require
 const http = require('http');
-const EvenEmiter = require('events');
+const eventEmitter = require('events');
+// listenter
 
-// listener
+// function
 
 const App = {
-    start: function (port) {
-        const emitter = new EvenEmiter();
-        http.createServer((requete, reponse) => {
-            reponse.writeHead(200, {
-                'content-type': 'text/html; charset=utf-8'
+    start: (port) => {
+        const emitter = new eventEmitter()
+        http.createServer((request, response) => {
+            response.writeHead(200, {
+                "Content-Type": "text/html; charset=utf-8"
             });
-            if (requete.url === '/') {
-                emitter.emit('root', reponse);
+            if (request.url === "/") {
+                emitter.emit('racine', response)
             }
-            reponse.end();
-        }).listen(port);
+            response.end()
+        }).listen(port)
         return emitter;
     }
-}
+};
+
 const app = App.start(8080);
-app.on('root', (response) => {
-    response.write('Vous étes à la racine');
+app.on("racine", (res) => {
+    res.write("Je suis à la racine");
 })

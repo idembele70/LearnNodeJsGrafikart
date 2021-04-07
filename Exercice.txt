@@ -71,12 +71,12 @@ une fonction qui fait un console log de 'j'ai sauté'
 - faire en sorte qu'il soit emit qu'une seule fois
 - creer une variable nommé app qui fait appel la methode static/constructeur
  start App
-- le demarer app il prend en paramètre une string root
+- le demarer la variable app il prend en paramètre une string root
 une fonction qui elle même prend en paramètre response et cette fonction
 écris une response qui fait un write 'je suis à la racine'
 - créer un objet nommé App 
 - mettre une fonction dans la méthode start de App
-- dans la fonction de start instacier une méthode listener qui 
+- dans la fonction de start instacier une variable listener qui 
 est de type EvenEmitter
 - ensuite retourné listener
 - avant le return creer une variable server qui est une instaciation
