@@ -91,3 +91,38 @@ est à la racine '/' alors on emet l'evenement
 la reponse
 puis on fait un end la reponse hors de la condition et toujours envoyer
 une entete de type 200
+
+4/6 Les Streams :
+- créer un fichier nommé copy.js
+- ajouter une vidéo ou une image à la racine du projet
+- dans copy js importer fs
+- lire l'image ou la vidéo importer auparavant
+- s'il y a erreur on la throw
+- utiliser writeFile de fs qui pointe sur l'image/video, 
+    lui passe en argument le nom du nouveau fichier, 
+    un autre data qui est celui de readFile, et une fonction qui prend 
+    en argument err throw l'erreur s'il y a en un sinon faire un 
+    console.log 'le ficher à bien éte copie'
+- creer une variable file qui es égal a un string égal au nom de 
+    l'image/video
+- creer une variable nommé read qui est égal a createReadStream 
+de fs qui prend en paramètre file
+ démarer read un prends en paramètre une string data et une 
+ fonction qui elle meme prend en paramètre variable nommé chunk
+- dans cette fonction faire un console log 'J'ai lu' avec la taille 
+de chunk
+- demarer read il prend en paramètre end et une fonction qui console log
+ 'j'ai fini de lire le fichier 
+ - ensuite utiliser stat de fs il prend en paramètre le fichier à lire, 
+ et une fonction qui elle meme prend en paramètre err et stat 
+ - creer une variable nommé total qui est egal à size de stat
+ - ajouter le code du lecteur de fichier block par block ! dans cette
+    fonction
+- creer une variable nommé progress qui est égal 0
+- dans read on ajouter a progress la taille de chunk
+- afficher dans un console log 'j'ai lu' avec progress en pourcentage
+- créer une variable nommé write qui est égal à createwritestream de fs
+    il prend en paramètre le nom de l'image/video
+- remplacer le read on end par read pipe qui prend en paramètre write
+- demare write il prend en paramètre une string finish et un callback
+    qui fait un console log 'le fichier à été copié'

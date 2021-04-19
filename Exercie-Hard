@@ -2,7 +2,7 @@
 ce serveur retourne bonjour
 
 - creer un server
-ce server lit un fichier index html et retourne une erreur ci le fichier
+ce server lit un fichier index html et retourne une erreur si le fichier
 est introuvable
 
 - creer un server
@@ -12,7 +12,12 @@ ce serveur retourne bonjour + le query name
 ce serveur retourne le query name qui remplace l'interploration d'un fichier
 html nommé name 
 
-- creer un emitter qui peut etre execute fois affiche dans la consle j'ai sauter
+- creer un emitter qui peut etre execute fois affiche dans la console j'ai sauter
 - creer un emitter qui peut etre execute qu'une seule fois
 
 -creer un emitter qui ecris je suis à la racine
+
+- creer un fichier copy.js qui copie un fichier !
+
+- creer un lecteur de fichier block par block !
+- creer un lecteur de fichier block par block et affiche le pourcentage !
